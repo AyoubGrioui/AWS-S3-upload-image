@@ -1,43 +1,19 @@
 package com.quickstart.yhamdane.awss3uploadimage.model;
 
-import java.util.Objects;
-import java.util.Optional;
-import java.util.UUID;
+import lombok.*;
 
+import java.util.Objects;
+import java.util.UUID;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class UserProfile {
     private UUID userProfileId;
     private String username;
     private String userProfileImageLink; //S3 Key
 
-    public UserProfile(UUID userProfileId, String username, String userProfileImageLink) {
-        this.userProfileId = userProfileId;
-        this.username = username;
-        this.userProfileImageLink = userProfileImageLink;
-    }
-
-    public UUID getUserProfileId() {
-        return userProfileId;
-    }
-
-    public void setUserProfileId(UUID userProfileId) {
-        this.userProfileId = userProfileId;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public Optional<String> getUserProfileImageLink() {
-        return Optional.ofNullable(userProfileImageLink);
-    }
-
-    public void setUserProfileImageLink(String userProfileImageLink) {
-        this.userProfileImageLink = userProfileImageLink;
-    }
 
     @Override
     public boolean equals(Object o) {
